@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta https-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Atelier 101</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"><!-- font awesome CDN -->
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+
+    <nav id="main-nav" class="topnav">
+      <a href="http://www.royalpalace.go.kr/" class="nav-item logo">
+        <span class="label"><i class="fas fa-home"></i>About Us</span>
+      </a>
+      <a href="http://www.royalpalace.go.kr/" class="nav-item">
+        <span class="label"><i class="fas fa-info-circle"></i>Menu</span>
+      </a>
+      <a href="http://www.royalpalace.go.kr/" class="nav-item">
+        <span class="label"><i class="fas fa-image"></i>Rent</span>
+      </a>
+      <a href="http://www.royalpalace.go.kr/" class="nav-item">
+        <span class="label"><i class="fas fa-plane-departure"></i>Contact Us</span>
+      </a>
+      <a href="http://www.royalpalace.go.kr/" class="nav-item more">
+        <span class="label"><i class="fas fa-ellipsis-h"></i>Contact</span>
+      </a>
+      <a href="http://www.royalpalace.go.kr/" href="javascript:void(0);" class="nav-item trigram" onclick="navToggle()">&#9776;</a>
+    </nav>
+
+
+
+<body>
+
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img class="slideimg" src="img/profile.jpg" style="width:100%">
+  <div class="text">Caption Text</div>
+</div>
+
+<div class="mySlides fade">
+  <img class="slideimg" src="img/lemontartwhole.jpg" style="width:100%">
+  <div class="text">Caption Two</div>
+</div>
+
+<div class="mySlides fade">
+  <img class="slideimg" src="img/fruitmini.jpg" style="width:100%">
+  <div class="text">Caption Three</div>
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+
+
+  </body>
+</html>
